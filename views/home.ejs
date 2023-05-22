@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/81f3b2de0b.js" crossorigin="anonymous"></script>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+    </head>
+    <body>
+        <div id = "outer">
+            <h1 id = "heading">TODO App</h1>
+            <form action = "/users/add-task" method = "Post">
+                <input type = "text" name = "task" placeholder="Type ur task here..." required><br>
+                <select value = "Choose a category">
+                    <option value="Work">Work</option>
+                    <option value ="School">School</option>
+                    <option value = "Home">Home</option>
+                </select>
+                <input type = "date" value = "dd.mm.yyyy" name = "duedate">
+                <input type ="button" value = "+ADD TASK" name = "addButton">
+                <input type = "button" value = "DELETE TASKS" name ="deleteButton">
+            </form>
+            <ul>
+                
+            </ul>
+
+        </div>
+        
+    </body>
+</html>
