@@ -21,7 +21,17 @@
                 <input type = "button" value = "DELETE TASKS" name ="deleteButton">
             </form>
             <ul>
-
+                <% for (let i of TODO_list) { %> 
+                    <div class="task"> 
+                         <li>
+                             <input type = "checkbox" class ="togglebutton" >
+                             <p id = "task"><%= i.task %> <br> <%=i.due_date%></p>
+                             <p  id = "category"><%= i.category %></p>
+                             
+                         </li>
+                     </div>
+                    
+                 <% } %>
             </ul>
 
         </div>

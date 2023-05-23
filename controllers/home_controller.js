@@ -1,11 +1,20 @@
 const User = require('../models/user');
 
 
-module.exports.home = (req,res)=>{
-    return res.render('home',{
-        title:"Home"
-    });
+module.exports.home = async(req,res)=>{
+    try {
+        const taskList = await User.find({});
+        return res.render('home', {
+            title: "Home",
+            TODO_list: taskList
+        });
+    } catch (err) {
+        console.log("error in fetching tasks from db",err);
+    }
+    
 }
+
+
 
 module.exports.addtask = async function(req,res){
     try {
