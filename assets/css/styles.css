@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #outer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  input[type="date"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+  }
+  
+  select {
+    width: 70%;
+    padding: 12px 20px;
+  }
+  
+  input[type="submit"] {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top:10px;
+  }
+  
+  input[type="button"] {
+      background-color:#f44336; /* Red */
+      border:none;
+      color:white;
+      padding:15px,32px;
+      text-align:center;
+      text-decoration:none;
+      display:inline-block;
+      font-size:16px;
+  }
+  
+  ul {
+      list-style-type:none;
+  }
+  
+  .task{
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     margin-top:10px;
+  }
+  
+  /* Add some hover effects */
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+      opacity:0.8;
+  }
+  
+  input[type="text"]:hover,
+  input[type="date"]:hover,
+  select:hover {
+      border-color:#4CAF50
+  }
+  

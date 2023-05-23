@@ -4,6 +4,9 @@ const port = 8001;       //port
 const db = require('./config/mongoose');
 
 app.use(express.urlencoded());
+
+app.use(express.static('./assets'));
+
 app.use('/',require('./routes'));  //routing using express router 
 
 app.set('view engine','ejs');  //setting up view engine as ejs
