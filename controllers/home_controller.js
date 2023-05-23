@@ -26,3 +26,14 @@ module.exports.addtask = async function(req,res){
         return;
     }
 }
+
+module.exports.deletetask = async(req, res)=> {
+    try {
+        let id = req.query.task;
+        console.log(id);
+        await User.findOneAndDelete(id);
+        return res.redirect('back');
+    } catch (err) {
+        console.log("Error in Deleting :", err);
+    }
+};

@@ -11,14 +11,16 @@
             <h1 id = "heading">TODO App</h1>
             <form action = "/add-task" method = "Post">
                 <input type = "text" name = "task" placeholder="Type ur task here..." required><br>
-                <select value = "Choose a category">
+                <select>
+                    <option value="" selected>Category</option>
                     <option value="Work">Work</option>
-                    <option value ="School">School</option>
-                    <option value = "Home">Home</option>
-                </select>
+                    <option value="School">School</option>
+                    <option value="Home">Home</option>
+                  </select>
+                  
                 <input type = "date" value = "dd.mm.yyyy" name = "due_date"><br>
                 <input type = "Submit" value = "ADD TASK" name = "addButton"><br>
-                <input type = "button" value = "DELETE TASKS" name ="deleteButton">
+                
             </form>
             <ul>
                 <% for (let i of TODO_list) { %> 
@@ -27,7 +29,11 @@
                              <input type = "checkbox" class ="togglebutton" >
                              <p id = "task"><%= i.task %> <br> <%=i.due_date%></p>
                              <p  id = "category"><%= i.category %></p>
-                             
+                             <div class="delete-button">
+                                <a href="/delete-task/?task=<%= i.task %>">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </div>
                          </li>
                      </div>
                     
