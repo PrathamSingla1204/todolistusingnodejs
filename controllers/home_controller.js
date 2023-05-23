@@ -17,6 +17,7 @@ module.exports.home = async(req,res)=>{
 
 
 module.exports.addtask = async function(req,res){
+  
     try {
         await User.create(req.body);
         return res.redirect('back');
